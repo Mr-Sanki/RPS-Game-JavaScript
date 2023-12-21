@@ -1,0 +1,232 @@
+/* CSS Reset */
+
+/* Box Sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove Margin and Padding */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+dl,
+figure,
+blockquote,
+fieldset,
+legend {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove List Styles (Reset List) */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Remove Default Styles for Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+/* Remove Default Styles for Links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ----------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,300&family=Ubuntu:wght@400;700&display=swap');
+
+/* font-family: 'Roboto', sans-serif;
+font-family: 'Ubuntu', sans-serif; */
+:root{
+    --dark:#222831;
+    --gray:#8F97A3;
+    --light:#F2F2F2;
+    --red:#D7263D;
+    --blue:#0076B5;
+
+    --ff-primary:'Roboto', sans-serif;
+    --ff-secondary:'Ubuntu', sans-serif;
+
+    --fs-xl:48px;
+    --fs-l:28.4px;
+    --fs-normal:17.5px;
+    --fs-s:11px;
+}
+body{
+    
+    background-color: var(--gray);
+    color: var(--dark);
+}
+h1{
+    font-family: var(--ff-primary);
+    font-size: var(--fs-xl);
+    font-weight: 900;
+    color: var(--blue);
+    text-shadow: 0px 1px 2px var(--dark);
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.main-container{
+    background-color: var(--light);
+    font-family: var(--ff-secondary);
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 1px var(--dark);
+
+    margin: 0 15%;
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.screen{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+
+    margin: 10px 0;
+}
+.score-box{
+    border: 2px solid var(--dark);
+    border-radius: 5px;
+    height: 100px;
+    width: 200px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.score{
+    font-size: var(--fs-xl);
+}
+.screen > span{
+    color: var(--light);
+    background-color: var(--blue);
+    font-size: var(--fs-s);
+    font-weight: 700;
+    
+    width: 60px;
+    text-align: center;
+    align-self: flex-start;
+}
+
+.message{
+    font-size: var(--fs-xl);
+    font-weight: 700;
+
+}
+
+.field{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px ;
+    border: 3px solid var(--red);
+
+    padding: 20px 10px ;
+}
+.choices{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+
+    margin: 100px 0 50px 0;
+}
+
+.choice{
+    
+    border: 3px solid var(--dark);
+    border-radius: 50%;
+}
+.choice:hover{
+    cursor: pointer;
+}
+
+.choice img{
+    padding: 10px;
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+/* Footer */
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin: 10px 0 5px 0;
+}
+footer p{
+    font-size: var(--fs-normal);
+}
+footer a, footer img{
+    height: var(--fs-normal);
+
+}
+footer img:hover{
+    rotate: 360deg;
+    transition-duration: 500ms;
+    transition-timing-function: ease-out;
+}
+
+.reset-btn{
+    background-color: var(--red);
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 0px 3px 0px var(--gray);
+    color: var(--light);
+    font-size: var(--fs-normal);
+    font-weight: 700;
+    padding: 5px 10px;
+    margin-top: 20px;
+}
+.shadow{
+    text-shadow: 0px 1px 2px var(--gray);
+    text-align: center;
+}
+
+@media (max-width:600px){
+    h1, .message, .score{
+        font-size: var(--fs-l);
+    }
+    .score-box{
+        height: 50px;
+        width: 100px;
+    }
+    .main-container{
+        margin: 0 5%;
+        height: 80vh;
+    }
+    body{
+        padding: 0;
+    }
+    .choices{
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+}

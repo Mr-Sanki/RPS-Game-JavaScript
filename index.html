@@ -4,27 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/style.css">
-    <link rel="stylesheet" href="assets/style.css">
     <title>RPS-Game</title>
 </head>
 <body>
-    <div class="container">
-        <button id="reset">reset</button>
-        <div class="socre">
-            <div id="player-score"></div>
-            <span>:</span>
-            <div id="cpu-score"></div>
+    <header>
+        <h1>ROCK PAPER SCISSOR</h1>
+    </header>
+
+<!-- ************ MAIN ****************-->
+    <div class="main-container">
+        <div class="screen">
+            <span>Player</span>
+            <div class="score-box">
+                <div class="score" id="player-score">0</div>
+                <div class="score" id="computer-score">0</div>
+            </div>
+            <span>Computer</span>
         </div>
-        <div class="player-section">
-            <!-- <img src="#" alt="Rock" id="rock">
-            <img src="#" alt="Paper" id="paper">
-            <img src="#" alt="Scissor" id="scissor"> -->
-            <input type="text" for="submit" id="player-selection">
+        <div class="message" id="message">Let's Play!</div>
+        <div class="choices">
+            <div class="choice" id="rock"><img src="assets/img/rock.png" alt="rock-png"></div>
+            <div class="choice" id="paper"><img src="assets/img/paper.png" alt="paper-png"></div>
+            <div class="choice" id="scissor"><img src="assets/img/scissor.png" alt="scissor-png"></div>
         </div>
-        <button id="submit" onclick="playRound()">submit</button>
-        <div id="computer-selection"></div>
-        <div id="message"></div>
     </div>
+<!-- ************ *** ****************-->
+    
+    <footer>
+        <p>copyrights &copy; 2023 Mr-Sanki</p>
+        <a href="https://github.com/Mr-Sanki"><img src="assets/img/github-mark.svg" alt="github-icon"></a>
+    </footer>
+
     <script src="assets/script.js"></script>
 </body>
 </html>
